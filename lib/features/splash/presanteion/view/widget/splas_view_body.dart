@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../../../../../constens.dart';
 
@@ -15,11 +13,17 @@ class SplashViewBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             Text(
-              'BOOKLY',
+              AppName,
               style: TextStyle(
-                color: Colors.white,
                 fontSize: 70,
                 fontWeight: FontWeight.bold,
+                fontFamily: KFontBlackOpsOne,
+              ),
+            ),
+            Text(
+              'read free books',
+              style: TextStyle(
+                fontSize: 20,
                 fontFamily: KFontBlackOpsOne,
               ),
             ),
