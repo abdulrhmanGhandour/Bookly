@@ -1,9 +1,39 @@
+import 'package:bookly_app/features/splash/presanteion/view/widget/sliding_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../constens.dart';
 
-class SplashViewBody extends StatelessWidget {
+class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
+
+  @override
+  State<SplashViewBody> createState() => _SplashViewBodyState();
+}
+
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
+  late Animation<Offset> slidingAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    );
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
+            .animate(animationController);
+
+    animationController.forward();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +41,8 @@ class SplashViewBody extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
+          children: [
+            const Text(
               AppName,
               style: TextStyle(
                 fontSize: 70,
@@ -20,13 +50,7 @@ class SplashViewBody extends StatelessWidget {
                 fontFamily: KFontBlackOpsOne,
               ),
             ),
-            Text(
-              'read free books',
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: KFontBlackOpsOne,
-              ),
-            ),
+            SlididingText(slidingAnimation: slidingAnimation),
           ],
         ),
       ),
