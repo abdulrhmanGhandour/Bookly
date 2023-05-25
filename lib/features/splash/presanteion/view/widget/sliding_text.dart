@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../constens.dart';
+
+
 
 class SlididingText extends StatelessWidget {
   const SlididingText({

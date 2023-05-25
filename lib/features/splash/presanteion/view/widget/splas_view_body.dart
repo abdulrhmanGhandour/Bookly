@@ -3,7 +3,6 @@ import 'package:bookly_app/features/splash/presanteion/view/widget/sliding_text.
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-
 import '../../../../../constens.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -26,8 +25,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
     navigateToHome();
   }
 
-
-
   @override
   void dispose() {
     super.dispose();
@@ -41,20 +38,17 @@ class _SplashViewBodyState extends State<SplashViewBody>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              AppName,
-              style: TextStyle(
-                fontSize: 70,
-                fontWeight: FontWeight.bold,
-                fontFamily: KFontBlackOpsOne,
-              ),
-            ),
+            const LogoApp(fontSize: 70,),
             SlididingText(slidingAnimation: slidingAnimation),
           ],
         ),
       ),
     );
   }
+
+
+
+///////////
 
   void initSlidingAnimation() {
     animationController = AnimationController(
@@ -68,10 +62,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
     animationController.forward();
   }
 
-    void navigateToHome() {
+  void navigateToHome() {
     Future.delayed(const Duration(seconds: 3), () {
       Get.to(() => const HomeView(),
           transition: Transition.fade, duration: KTransitionDuration);
     });
   }
 }
+
