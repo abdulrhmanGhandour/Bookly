@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utls/assets.dart';
 import 'package:flutter/material.dart';
 import '../../../../../constens.dart';
 
@@ -19,10 +20,10 @@ class SlididingText extends StatelessWidget {
           return SlideTransition(
             position: slidingAnimation,
             child: const Text(
-              'read free books',
+              'Read free books',
               style: TextStyle(
                 fontSize: 20,
-                fontFamily: KFontBlackOpsOne,
+                fontFamily: kFontBlackOpsOne,
               ),
             ),
           );

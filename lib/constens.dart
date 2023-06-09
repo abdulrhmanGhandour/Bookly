@@ -1,28 +1,28 @@
+
 import 'package:flutter/material.dart';
 
-const Color KPrimaryColor = Color(0xff100B20);
-const KFontBlackOpsOne = 'BlackOpsOne';
-const AppName ='BOOKLY';
-const KTransitionDuration = Duration(milliseconds: 200);
+const Color kPrimaryColor = Color(0xff100B20);
+const appName = 'BOOKLY';
+const kTransitionDuration = Duration(milliseconds: 200);
+const kFontBlackOpsOne = 'BlackOpsOne';
+const kFontLora = 'Lora';
+
 
 
 
 
 class LogoApp extends StatelessWidget {
-  const LogoApp({
-    super.key,
-    required this.fontSize 
-  });
+  const LogoApp({super.key, required this.fontSize});
 
-final double fontSize;
+  final double fontSize;
   @override
   Widget build(BuildContext context) {
-    return  Text(
-      AppName,
+    return Text(
+      appName,
       style: TextStyle(
         fontSize: fontSize,
         fontWeight: FontWeight.bold,
-        fontFamily: KFontBlackOpsOne,
+        fontFamily: kFontBlackOpsOne,
       ),
     );
   }

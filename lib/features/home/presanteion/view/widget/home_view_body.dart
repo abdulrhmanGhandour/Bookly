@@ -21,7 +21,7 @@ class HomeViewBody extends StatelessWidget {
           ),
           Text(
             'Best seller',
-            style: Styles.titleMedium,
+            style: Styles.textStyle18,
           ),
           SizedBox(
             height:18,
@@ -54,8 +54,10 @@ class BestSellerListItem extends StatelessWidget {
               ),
             ),
           ),
-          Column(
-            children: [],
+          const Column(
+            children: [
+              
+            ],
           ),
         ],
       ),
