@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../../../../constens.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -9,7 +8,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 34),
+      padding: const EdgeInsets.symmetric( vertical: 34),
       child: Row(
         children: [
           const LogoApp(fontSize:22),
