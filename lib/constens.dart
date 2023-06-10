@@ -6,6 +6,8 @@ const appName = 'BOOKLY';
 const kTransitionDuration = Duration(milliseconds: 200);
 const kFontBlackOpsOne = 'BlackOpsOne';
 const kFontLora = 'Lora';
+const kStarColor = 0xffFFDD4F;
+const kSecondColor = 0xff707070;
 
 
 
