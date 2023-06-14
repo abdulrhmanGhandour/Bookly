@@ -5,23 +5,27 @@ import '../../../../../constens.dart';
 import '../../../../../core/utls/styles.dart';
 
 class BookRating extends StatelessWidget {
-  const BookRating({super.key});
+  const BookRating(
+      {super.key, this.mainAxisAlignment = MainAxisAlignment.start});
+
+  final MainAxisAlignment mainAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: mainAxisAlignment,
       children: [
         const Icon(
           FontAwesomeIcons.solidStar,
           color: Color(kStarColor),
-          size: 18,
+          size: 14,
         ),
         const SizedBox(
-          width: 6.3,
+          width: 7,
         ),
-        const Text(
+        Text(
           '4.8',
-          style: Styles.textStyle16,
+          style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(
           width: 5,
@@ -29,7 +33,8 @@ class BookRating extends StatelessWidget {
         Text(
           '(2390)',
           style: Styles.textStyle14.copyWith(
-            color: const Color(kSecondColor),
+            fontWeight: FontWeight.w600,
+            color: Colors.white.withOpacity(.5),
           ),
         )
       ],
