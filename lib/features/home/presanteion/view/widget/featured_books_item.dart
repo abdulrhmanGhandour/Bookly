@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/utls/assets.dart';
 
-class FeaturedBooksItem extends StatelessWidget {
-  const FeaturedBooksItem({super.key});
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({super.key});
 
   @override
   Widget build(BuildContext context) {

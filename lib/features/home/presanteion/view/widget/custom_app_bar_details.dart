@@ -11,12 +11,12 @@ class CustomAppBarBookDetails extends StatelessWidget {
         children: [ 
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.close,size: 28,),
+            icon: const Icon(Icons.close,size: 30,),
           ),
           const Spacer(),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.shopping_cart_outlined),
+            icon: const Icon(Icons.shopping_cart_outlined,size: 28,),
           ),
         ],
       ),
