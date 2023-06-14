@@ -1,9 +1,7 @@
 import 'package:bookly_app/core/utls/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'constens.dart';
-import 'features/splash/presanteion/view/splash_view.dart';
 
 void main() {
   runApp(const BooklyApp());
@@ -24,4 +22,3 @@ class BooklyApp extends StatelessWidget {
     );
   }
 }
-

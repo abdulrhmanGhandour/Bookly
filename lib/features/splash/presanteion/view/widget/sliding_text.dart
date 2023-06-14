@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/utls/assets.dart';
+
 import 'package:flutter/material.dart';
 import '../../../../../constens.dart';
 

@@ -1,5 +1,4 @@
 import 'package:bookly_app/core/utls/app_router.dart';
-import 'package:bookly_app/features/home/presanteion/view/home_view.dart';
 import 'package:bookly_app/features/splash/presanteion/view/widget/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
