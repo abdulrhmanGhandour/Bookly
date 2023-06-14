@@ -8,7 +8,7 @@ class BookAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 30),
+      padding: EdgeInsets.symmetric(horizontal: 38),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -26,6 +26,7 @@ class BookAction extends StatelessWidget {
           Expanded(
             child: CustomButton(
               text: 'Free preview',
+              fontSize: 16,
               backgroundColor: Color(0xffEF8262),
               textColor: Colors.white,
               borderRadius: BorderRadius.only(
