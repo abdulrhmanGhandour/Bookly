@@ -6,8 +6,8 @@ import '../../../../../constens.dart';
 import '../../../../../core/utls/assets.dart';
 import '../../../../../core/utls/styles.dart';
 
-class BestSellerListItem extends StatelessWidget {
-  const BestSellerListItem({super.key});
+class BookListItem extends StatelessWidget {
+  const BookListItem({super.key});
 
   @override
   Widget build(BuildContext context) {
