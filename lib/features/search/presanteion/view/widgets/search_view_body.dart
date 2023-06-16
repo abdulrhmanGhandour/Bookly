@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
+import 'custom_search_bar.dart';
+
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        SearchBar()
-        
-      ],
+    return const Padding(
+      padding: EdgeInsets.all(30.0),
+      child: Column(
+        children: [
+          CustomSearchBar(),
+        ],
+      ),
     );
   }
 }
 
-class SearchBar extends StatelessWidget {
-  const SearchBar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const TextField();
-  }
-}
