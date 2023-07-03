@@ -33,7 +33,7 @@ class ServerFailuer extends Failure {
         return ServerFailuer('Connection was error with ApiServer');
 
       case DioExceptionType.unknown:
-        return ServerFailuer('Opps, Unknown error');
+        return ServerFailuer('Oppssssss, Unknown error');
       default:
         return ServerFailuer('Opps,Error');
     }

@@ -1,16 +1,21 @@
-class ReadingModes {
-  bool text;
-  bool image;
+import 'package:equatable/equatable.dart';
 
-  ReadingModes({
-    required this.text,
-    required this.image,
-  });
+class ReadingModes extends Equatable {
+   final bool? text;
+  final bool? image;
 
-  factory ReadingModes.fromJson(Map<String, dynamic> json) {
-    return ReadingModes(
-      text: json['text'],
-      image: json['image'],
-    );
-  }
+  const ReadingModes({this.text, this.image});
+
+  factory ReadingModes.fromJson(Map<String, dynamic> json) => ReadingModes(
+        text: json['text'] as bool?,
+        image: json['image'] as bool?,
+      );
+
+  Map<String, dynamic> toJson() => {
+        'text': text,
+        'image': image,
+      };
+
+  @override
+  List<Object?> get props => [text, image];
 }

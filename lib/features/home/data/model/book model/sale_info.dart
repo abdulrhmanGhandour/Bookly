@@ -1,28 +1,26 @@
-import 'package:bookly_app/features/home/data/model/book%20model/price.dart';
-import 'offer.dart';
 
-class SaleInfo {
-  String country;
-  String saleability;
-  bool isEbook;
-  List<Offer> offers;
-  Price listPrice;
 
-  SaleInfo({
-    required this.country,
-    required this.saleability,
-    required this.isEbook,
-    required this.offers,
-    required this.listPrice,
-  });
+import 'package:equatable/equatable.dart';
 
-  factory SaleInfo.fromJson(Map<String, dynamic> json) {
-    return SaleInfo(
-      country: json['country'],
-      saleability: json['saleability'],
-      isEbook: json['isEbook'],
-      offers: List<Offer>.from(json['offers'].map((i) => Offer.fromJson(i))),
-      listPrice: Price.fromJson(json['listPrice']),
-    );
-  }
+class SaleInfo  extends Equatable{
+ final String? country;
+  final String? saleability;
+  final bool? isEbook;
+
+  const SaleInfo({this.country, this.saleability, this.isEbook});
+
+  factory SaleInfo.fromJson(Map<String, dynamic> json) => SaleInfo(
+        country: json['country'] as String?,
+        saleability: json['saleability'] as String?,
+        isEbook: json['isEbook'] as bool?,
+      );
+
+  Map<String, dynamic> toJson() => {
+        'country': country,
+        'saleability': saleability,
+        'isEbook': isEbook,
+      };
+
+  @override
+  List<Object?> get props => [country, saleability, isEbook];
 }
