@@ -2,9 +2,8 @@ import 'package:bookly_app/features/home/data/model/book%20model/pdf.dart';
 import 'package:equatable/equatable.dart';
 import 'equb.dart';
 
-
 class AccessInfo extends Equatable {
-   final String? country;
+  final String? country;
   final String? viewability;
   final bool? embeddable;
   final bool? publicDomain;
@@ -15,20 +14,20 @@ class AccessInfo extends Equatable {
   final String? accessViewStatus;
   final bool? quoteSharingAllowed;
 
-  AccessInfo({
-    required this.country,
-    required this.viewability,
-    required this.embeddable,
-    required this.publicDomain,
-    required this.textToSpeechPermission,
-    required this.epub,
-    required this.pdf,
-    required this.webReaderLink,
-    required this.accessViewStatus,
-    required this.quoteSharingAllowed,
+  const AccessInfo({
+    this.country,
+    this.viewability,
+    this.embeddable,
+    this.publicDomain,
+    this.textToSpeechPermission,
+    this.epub,
+    this.pdf,
+    this.webReaderLink,
+    this.accessViewStatus,
+    this.quoteSharingAllowed,
   });
 
-   factory AccessInfo.fromJson(Map<String, dynamic> json) => AccessInfo(
+  factory AccessInfo.fromJson(Map<String, dynamic> json) => AccessInfo(
         country: json['country'] as String?,
         viewability: json['viewability'] as String?,
         embeddable: json['embeddable'] as bool?,

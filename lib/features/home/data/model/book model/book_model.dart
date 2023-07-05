@@ -5,7 +5,7 @@ import 'package:equatable/equatable.dart';
 import 'access_info.dart';
 
 class BookModel extends Equatable {
-   final String? kind;
+  final String? kind;
   final String? id;
   final String? etag;
   final String? selfLink;
@@ -14,7 +14,7 @@ class BookModel extends Equatable {
   final AccessInfo? accessInfo;
   final SearchInfo? searchInfo;
 
-   const BookModel({
+  const BookModel({
     this.kind,
     this.id,
     this.etag,
