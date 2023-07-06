@@ -24,7 +24,7 @@ class FeaturedBooksListView extends StatelessWidget {
               itemBuilder: (context, index) => CustomBookImage(
                 imageUrl:
                     state.books[index].volumeInfo.imageLinks?.thumbnail ?? '',
-              ),
+              ), 
               separatorBuilder: (context, index) => const SizedBox(width: 10),
             ),
           );
