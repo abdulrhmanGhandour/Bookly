@@ -28,7 +28,7 @@ class FeaturedBooksListView extends StatelessWidget {
               separatorBuilder: (context, index) => const SizedBox(width: 10),
             ),
           );
-        } else if (state is FeaturedBooksFailuer) {
+        } else if (state  is FeaturedBooksFailuer) {
           return CustomErrorWidget(errMessage: state.errMessage);
         } else {
           return const CustomLodingIndicator();

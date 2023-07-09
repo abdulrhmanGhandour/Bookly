@@ -30,7 +30,7 @@ class ServerFailuer extends Failure {
         return ServerFailuer('Requset with ApiServer was cancel');
 
       case DioExceptionType.connectionError:
-        return ServerFailuer('Connection was error with ApiServer');
+        return ServerFailuer('No Internet Connection');
 
       case DioExceptionType.unknown:
         return ServerFailuer('Oppssssss, Unknown error');
