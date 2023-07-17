@@ -3,7 +3,6 @@ import 'package:bookly_app/features/home/presanteion/view/widget/book_details_vi
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../manger/similar books/similar_books_cubit.dart';
 
 class BookDetailsView extends StatefulWidget {
@@ -25,9 +24,11 @@ class _BookDetailsViewState extends State<BookDetailsView> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: SafeArea(
-        child: BookDetailsViewBody(),
+        child: BookDetailsViewBody(
+          books: widget.books,
+        ),
       ),
     );
   }
