@@ -16,7 +16,7 @@ class CustomAppBarBookDetails extends StatelessWidget {
               GoRouter.of(context).pop();
             },
             icon: const Icon(
-              Icons.close,
+              Icons.close,  
               size: 30,
             ),
           ),
