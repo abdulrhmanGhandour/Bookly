@@ -1,4 +1,6 @@
+import 'package:bookly_app/features/search/presanteion/manger/search%20cubit/search_view_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomSearchBar extends StatelessWidget {
@@ -7,6 +9,10 @@ class CustomSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onSubmitted: (value) {
+        BlocProvider.of<SearchViewCubit>(context)
+            .fetchSearchBook(bookName: value);
+      },
       decoration: InputDecoration(
         hintText: 'Search',
         prefixIcon: const Icon(
@@ -19,7 +25,6 @@ class CustomSearchBar extends StatelessWidget {
     );
   }
 }
-
 
 OutlineInputBorder buildOutlineInputBorder() {
   return OutlineInputBorder(

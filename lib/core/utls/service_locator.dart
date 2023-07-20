@@ -1,5 +1,4 @@
 import 'package:bookly_app/features/home/data/repo/home_repo_impi.dart';
-import 'package:bookly_app/features/search/data/repo/search_repo.dart';
 import 'package:bookly_app/features/search/data/repo/search_repo_impil.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
